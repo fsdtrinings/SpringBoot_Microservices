@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.mkj.app.entity.ContactDetails;
+import com.mkj.app.entity.Feedback;
 import com.mkj.app.entity.Instructor;
 
 @Service
@@ -18,6 +19,9 @@ public interface IInstructorService {
 	
 	// pending
 	public List<Instructor> getInstructorsByCourseName(String courseName);
+	
+	public Instructor saveInstructorFeedback(int icode , Feedback feedback);
+	
 	
 	
 }

@@ -1,11 +1,13 @@
 package com.mkj.app.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.mkj.app.entity.ContactDetails;
+import com.mkj.app.entity.Feedback;
 import com.mkj.app.entity.Instructor;
 import com.mkj.app.repository.IInstructorRepository;
 
@@ -50,6 +52,34 @@ public class InstructorServiceImpl implements IInstructorService {
 	public List<Instructor> getInstructorsByCourseName(String courseName) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	@Override
+	@Transactional
+	public Instructor saveInstructorFeedback(int icode, Feedback feedback) {
+		
+		Instructor ins = getInstructorById(icode);
+		if(ins!=null)
+		{
+			
+			
+			List<Feedback> allSavedFeedbacks = ins.getFeedbacks();
+			if(allSavedFeedbacks!=null && !allSavedFeedbacks.isEmpty())
+			{
+				allSavedFeedbacks.add(feedback);
+				ins.setFeedbacks(allSavedFeedbacks);
+			}
+			else
+			{
+				List<Feedback> list = new ArrayList<>();
+				list.add(feedback);
+				ins.setFeedbacks(list);
+				
+			}
+			
+		
+		}
+		return ins;
 	}
 
 	@Override

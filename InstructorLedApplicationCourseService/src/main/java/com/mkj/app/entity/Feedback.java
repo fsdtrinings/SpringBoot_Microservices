@@ -1,4 +1,4 @@
-package com.mkj.app.entity;
+	package com.mkj.app.entity;
 
 import java.util.List;
 
@@ -23,8 +23,6 @@ public class Feedback {
 	private String designation;
 	private int points;// min 1 , max 5
 	private String comment;
-	private int totalFeedbacks;
-	private float avgFeedback;
 	
 	
 }

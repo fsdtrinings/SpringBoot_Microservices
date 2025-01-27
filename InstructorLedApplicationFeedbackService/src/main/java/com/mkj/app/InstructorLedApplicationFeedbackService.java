@@ -7,11 +7,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-public class InstructorLedApplication {
+public class InstructorLedApplicationFeedbackService {
 
 	public static void main(String[] args) {
-		SpringApplication.run(InstructorLedApplication.class, args);
+		SpringApplication.run(InstructorLedApplicationFeedbackService.class, args);
 	}
+
 	
 	@Bean
 	@LoadBalanced
@@ -19,5 +20,5 @@ public class InstructorLedApplication {
 	{
 		return new RestTemplate();
 	}
-
+	
 }
