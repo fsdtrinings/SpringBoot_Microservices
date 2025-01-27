@@ -1,0 +1,22 @@
+{
+
+    "name":"Ashish Bansal",
+    "salary":8000,
+    "doj":"10-11-2012",
+    "designation":"Trainer",
+    "gender":"MALE",
+    "baseLocation":"Noida"
+}
+
+{
+    "empCode": 3,
+    "employeeName": "Lata Verma",
+    "salary": 5000,
+    "gender": "FEMALE",
+    "doj": "10-11-2012",
+    "designation": "Trainer",
+    "contact": null,
+    "baseLocation": "Noida",
+    "feedbacks": [],
+    "skillset": []
+}

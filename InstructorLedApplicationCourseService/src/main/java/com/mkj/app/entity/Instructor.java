@@ -23,6 +23,7 @@ public class Instructor extends Employee {
 	private String baseLocation;
 	
 	@OneToMany
+	@JoinColumn(name="linkedWith")
 	private List<Feedback> feedbacks;
 	
 	
